@@ -1,0 +1,31 @@
+{% extends 'paginas/index.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<title>Diagrama de Caso de Uso</title>
+{% endblock %}
+
+{% block menu %}
+<h1 class="my-4">Diagrama de Caso de Uso
+</h1>
+<div class="card mb-4">
+    <div class="card-body">
+        <img class="card-img-top" src="{% static 'img/DiagramaCasodeUso.png'%}" alt="Card image cap">
+        <div class="card-body">
+            <h2 class="card-title">EmPonto</h2>
+            <p class="card-text">O EmPonto é um sistema de Gestão de Jornada de Trabalho foi criado para proporcionar maior conforto, agilidade e 
+                segurança para o dia a dia da empresa. <br><br>
+                Para começar a utiliza-lo basta fazer um cadastro em nossa empresa e aceitar um dos planos oferecidos que 
+                variam de acordo com a quantidade de funcionários. <br><br>
+                Apartir daí o administrador do sistema poderá cadastrar os seus funcionários que receram um código para
+                estarem habilidados a utilizarem o EmPonto no seu celular. <br><br>
+                A cada muduça em seu turno, início, ou término do expediente ou intervalo o servidor deverá fazer a leitura
+                do qrcode da empresa para fins de registro da jornada. <br><br>
+                Caso ele esqueça ou se falte com justificativa basta solicitar um registro manual, sendo este atrelado ao
+                aceite do administrador do sistema. <br><br>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

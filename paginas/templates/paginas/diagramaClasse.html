@@ -1,0 +1,28 @@
+{% extends 'paginas/index.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<title>Diagrama de Classe</title>
+{% endblock %}
+
+{% block menu %}
+<h1 class="my-4">Diagrama de Classe
+</h1>
+<div class="card mb-4">
+    <div class="card-body">
+        <img class="card-img-top" src="{% static 'img/DiagramaClasse.png'%}" alt="Card image cap">
+        <div class="card-body">
+            <h2 class="card-title">EmPonto</h2>
+            <p class="card-text">O diagrama de classes é uma representação da estrutura e relações das classes que
+                servem de modelo para objetos<br><br>
+                As classes recebem os atributos e métodos do sistema, os atributos definem as características do sistema
+                e possuem identificação e tipo do dado, os métodos ela definem as ações e comportamentos do sistema e
+                possuem nome e parâmentros.<br><br>
+                O relacionamento entre as classes definem como elas se interagem uma com as outras no sistema. <br><br>
+                Usumos o padrão MVC para separar representações de informação internas dos modos como a informação é apresentada
+                para e aceita pelo usuário, levando ao desenvolvimento paralelo de maneira eficiente. <br><br>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block titulo %}
+    <title>EmPonto</title>
+    {% endblock %}
+
+    <!-- Importar o Bootstrap-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog-home.css' %}">
+</head>
+
+<body>
+    {% block cabecalho %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EmPonto</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'index' %}">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'diagramaCasoUso' %}">Diagrama de Caso de Uso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'diagramaClasse' %}">Diagrama de Classes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                {% block menu %}
+
+                
+                <!-- Blog Post -->
+                <div class="card mb-4">
+                    <h1 class="my-4">Agilidade e Confiança
+                    </h1>
+                    <div class="card-body">
+                        <p class="card-text">Gerêncie a jornada de trabalho de trabalho dos seus funcionário em um só lugar. <br>
+                            Trabalhamos com as últimas tecnologias para trazer até você agilidade, qualidade e eficiência que você merece!</p>
+                    </div>
+                    <img class="card-img-top" src="{% static 'img/QR-Code-para-festas.jpg'%}" alt="Card image cap">
+                </div>
+
+                <!-- Blog Post -->
+                <div class="card mb-4">
+                    <h1 class="my-4">Suporte
+                    </h1>
+                    <div class="card-body">
+                        <p class="card-text">Possuimos uma equipe altamente campacitada pronta para lhe atender. <br>                            
+                            Entre em contato conosco para maiores informações.</p>
+                    </div>
+                    <img class="card-img-top" src="{% static 'img/suporte.jpg'%}" alt="Card image cap">
+                </div>
+
+                {% endblock %}
+            </div>
+
+            <div class="col-md-4">
+                {% block lateral %}
+
+                <!-- Search Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Pesquisa</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Digite aqui...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Pesquisar</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    {% endblock %}
+
+    {% block rodape %}
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">copyright 2020 &copy;</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    {% endblock %}
+
+
+    <!-- A ordem deve ser esta porque ele deve ler primeiro o jQuery-->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+
+</body>
+
+</html>
