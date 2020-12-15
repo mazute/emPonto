@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', 
     # Ativa o módulo páginas
     'paginas.apps.PaginasConfig',
-    'cadastros.apps.CadastrosConfig'
+    'cadastros.apps.CadastrosConfig',
+    'crispy_forms',
 ]
+
+# Crispy Forms
+CRISPY_TEMPLATE_PACK = 'booststrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
