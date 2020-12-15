@@ -1,0 +1,37 @@
+{% extends 'paginas/index.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<title>Empresas</title>
+{% endblock %}
+
+{% block conteudo %}
+<h1 class="my-4">Empresas</h1>
+<hr>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th>Nome</th>
+            <th>CNPJ</th>
+            <th>Telefone</th>
+            <th></th>
+        </tr>
+        {% for empresa in object_list %}
+            <tr>
+                <td>{{empresa.nome}}</td>
+                <td>{{empresa.cnpj}}</td>
+                <td>{{empresa.telefone}}</td>
+                <td>
+                    <a href="{% url 'editar-empresa' empresa.pk %}" title="Editar"><i class="fa fa-pencil"></i></a>
+                    <a href="{% url 'excluir-empresa' empresa.pk %}" title="Excluir"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">Nenhuma empresa cadastrada</td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+{% endblock %}
