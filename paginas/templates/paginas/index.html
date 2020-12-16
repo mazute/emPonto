@@ -51,7 +51,7 @@
         <div class="row">
             
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+            <div class="col-md-12">
                 {% block conteudo %}
 
                 
@@ -80,38 +80,18 @@
                 {% endblock %}
             </div>
 
-            <div class="col-md-4">
-                {% block lateral %}
-
-                <!-- Search Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Pesquisa</h5>
-                    <div class="card-body">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Digite aqui...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-secondary" type="button">Pesquisar</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
         <!-- /.row -->
 
     </div>
-    {% endblock %}
 
     {% block rodape %}
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+   <!--  <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">copyright 2020 &copy;</p>
         </div>
-        <!-- /.container -->
-    </footer>
+    </footer> -->
     {% endblock %}
 
 
@@ -122,6 +102,9 @@
     <script src="{% static 'js/jquery.min.js'%}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
 
+    {% block scripts %}
+    
+    {% endblock %}
 </body>
 
 </html>

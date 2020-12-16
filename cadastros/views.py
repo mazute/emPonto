@@ -42,20 +42,20 @@ class PontoUpdate(UpdateView):
     template_name = 'cadastros/form.html'
     success_url = reverse_lazy('listar-ponto')
 
-class EmpresaDelete(UpdateView):
+class EmpresaDelete(DeleteView):
     model = Empresa
-    template_name = 'cadastros/form.html'
+    template_name = 'cadastros/formExcluir.html'
     success_url = reverse_lazy('listar-empresa')
 
-class FuncionarioDelete(UpdateView):
+class FuncionarioDelete(DeleteView):
     model = Funcionario
-    template_name = 'cadastros/form.html'
+    template_name = 'cadastros/formExcluir.html'
     success_url = reverse_lazy('listar-funcionario')
 
-class PontoDelete(UpdateView):
+class PontoDelete(DeleteView):
     model = Ponto
-    template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-campo')
+    template_name = 'cadastros/formExcluir.html'
+    success_url = reverse_lazy('listar-ponto')
 
 class EmpresaList(ListView):
     model = Empresa

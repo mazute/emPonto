@@ -21,7 +21,7 @@ urlpatterns = [
     path('excluir/funcionario/<int:pk>', FuncionarioDelete.as_view(), name='excluir-funcionario'),
     path('excluir/ponto/<int:pk>', PontoDelete.as_view(), name='excluir-ponto'),
     
-    path('listar/empresas', EmpresaList.as_view(), name='listar-empresa'),
+    path('', EmpresaList.as_view(), name='listar-empresa'),
     path('listar/funcionarios', FuncionarioList.as_view(), name='listar-funcionario'),
     path('listar/pontos', PontoList.as_view(), name='listar-ponto'),
 
